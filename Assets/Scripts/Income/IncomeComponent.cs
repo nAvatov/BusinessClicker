@@ -2,33 +2,53 @@ namespace BusinessECS
 {
     [System.Serializable]
     public struct IncomeComponent {
-        public UnityEngine.UI.Slider incomeProgress;
-        public TMPro.TextMeshProUGUI incomeTMP;
-        public IncomeConfig incomeData;
-        private float income;
-        public int incomeMultiplier1;
-        public int incomeMultiplier2;
+        [UnityEngine.SerializeField] private  TMPro.TextMeshProUGUI _incomeTMP;
+        public UnityEngine.UI.Slider IncomeProgress;
+        public IncomeConfig IncomeData;
+        private float _income;
+        private int _incomeMultiplier1;
+        private int _incomeMultiplier2;
 
         public float Income {
             set {
-                income = value;
-                incomeTMP.SetText(income.ToString());
+                _income = value;
+                _incomeTMP.SetText(_income.ToString());
             }
 
             get {
-                return income;
+                return _income;
             }
         }
 
-        public IncomeComponent(int _income = 0) {
-            incomeProgress = null;
-            incomeTMP = null;
-            incomeData = null;
+        public int IncomeMultiplier1 {
+            get {
+                return _incomeMultiplier1;
+            }
 
-            income = _income;
+            set {
+                _incomeMultiplier1 = value;
+            }
+        }
 
-            incomeMultiplier1 = 0;
-            incomeMultiplier2 = 0;
+        public int IncomeMultiplier2 {
+            get {
+                return _incomeMultiplier2;
+            }
+
+            set {
+                _incomeMultiplier2 = value;
+            }
+        }
+
+        public IncomeComponent(int income = 0) {
+            IncomeProgress = null;
+            _incomeTMP = null;
+            IncomeData = null;
+
+            _income = income;
+
+            _incomeMultiplier1 = 0;
+            _incomeMultiplier2 = 0;
         }
     }
 }

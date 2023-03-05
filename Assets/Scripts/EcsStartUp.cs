@@ -7,26 +7,26 @@ namespace BusinessECS
 {
     public partial class EcsStartUp : MonoBehaviour
     {
-        [SerializeField] TMPro.TextMeshProUGUI balanceTMP;
-        MainBalance mainBalance;
+        [SerializeField] private TMPro.TextMeshProUGUI _balanceTMP;
+        private MainBalance _mainBalance;
         /// <summary>
         /// ECS 
         /// </summary>
-        private EcsWorld world;
-        private EcsSystems systems;
+        private EcsWorld _world;
+        private EcsSystems _systems;
 
         private void Start() {
-            world = new EcsWorld();
-            systems = new EcsSystems(world);
-            mainBalance = new MainBalance(balanceTMP);
+            _world = new EcsWorld();
+            _systems = new EcsSystems(_world);
+            _mainBalance = new MainBalance(_balanceTMP);
 
             InjectData();
             // AddOneFramedComponents();
             AddSystems();
 
-            systems.ConvertScene();
+            _systems.ConvertScene();
 
-            systems.Init();
+            _systems.Init();
         }
 
         private void AddOneFramedComponents()
@@ -36,12 +36,12 @@ namespace BusinessECS
 
         private void InjectData()
         {
-           systems.Inject(mainBalance);
+           _systems.Inject(_mainBalance);
         }
 
         private void AddSystems()
         {
-            systems
+            _systems
                 .Add(new NamesSystem())
                 .Add(new LevelSystem())
                 .Add(new IncomeSystem())
@@ -49,38 +49,38 @@ namespace BusinessECS
         }
 
         private void Update() {
-            systems.Run();
+            _systems.Run();
         }
 
         private void OnDestroy() {
-            if (systems == null) return;
+            if (_systems == null) return;
 
-            systems.Destroy();
-            systems = null;
+            _systems.Destroy();
+            _systems = null;
 
-            world.Destroy();
-            world = null;
+            _world.Destroy();
+            _world = null;
         }
     } 
 
     class MainBalance {
-        [SerializeField] TMPro.TextMeshProUGUI balanceTMP;
-        private float balance;
+        [SerializeField] private TMPro.TextMeshProUGUI _balanceTMP;
+        private float _balance;
 
         public float Balance {
             get {
-                return balance;
+                return _balance;
             }
 
             set {
-                balance = value;
-                balanceTMP.SetText(balance.ToString());
+                _balance = value;
+                _balanceTMP.SetText(_balance.ToString());
             }
         }
 
         public MainBalance(TMPro.TextMeshProUGUI tmpReference, int initialBalance = 0) {
-            balanceTMP = tmpReference;
-            balance = initialBalance;
+            _balanceTMP = tmpReference;
+            _balance = initialBalance;
         }
     } 
 

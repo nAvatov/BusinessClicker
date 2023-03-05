@@ -2,44 +2,44 @@ namespace BusinessECS
 {
     [System.Serializable]
     public struct LevelComponent {
-        public TMPro.TextMeshProUGUI levelTMP;
-        public TMPro.TextMeshProUGUI priceTMP;
-        public UnityEngine.UI.Button levelUpButton;
-        public LevelConfig levelData;
+        [UnityEngine.SerializeField] private TMPro.TextMeshProUGUI _levelTMP;
+        [UnityEngine.SerializeField] private TMPro.TextMeshProUGUI _priceTMP;
+        public UnityEngine.UI.Button LevelUpButton;
+        public LevelConfig LevelData;
 
-        private int level;
-        private int price;
+        private int _level;
+        private int _price;
 
         public int Level {
             set {
-                level = value;
-                levelTMP.SetText(level.ToString());
+                _level = value;
+                _levelTMP.SetText(_level.ToString());
             }
 
             get {
-                return level;
+                return _level;
             }
         }
 
         public int Price {
             set {
-                price = value;
-                priceTMP.SetText(price.ToString() + " $");
+                _price = value;
+                _priceTMP.SetText(_price.ToString() + " $");
             }
 
             get {
-                return price;
+                return _price;
             }
         }
 
         public LevelComponent(int _level = 0, int _price = 0) {
-            level = _level;
-            price = _price;
+            this._level = _level;
+            this._price = _price;
 
-            levelTMP = null;
-            priceTMP = null;
-            levelUpButton = null;
-            levelData = null;
+            _levelTMP = null;
+            _priceTMP = null;
+            LevelUpButton = null;
+            LevelData = null;
         }
     }
 }

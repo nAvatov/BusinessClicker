@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4f37f87eb57e94c864ceff44e21a9c, type: 3}
   m_Name: Upgrade2
   m_EditorClassIdentifier: 
-  price: 3
+  price: 4000
   incomeMultiplierInPercents: 200

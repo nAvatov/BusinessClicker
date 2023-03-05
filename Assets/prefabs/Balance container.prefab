@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 8110413148124409138}
   - component: {fileID: 8110413148124409137}
   - component: {fileID: 8110413148124409136}
-  - component: {fileID: 7556343401590845284}
-  - component: {fileID: 7875846611591971455}
   m_Layer: 5
   m_Name: Balance container
   m_TagString: Untagged
@@ -108,33 +106,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &7556343401590845284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110413148124409550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  convertMode: 0
---- !u!114 &7875846611591971455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110413148124409550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1986efdf6dc0c7f47bc0ecc82e1edce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    balanceTMP: {fileID: 8110413149763807376}
 --- !u!1 &8110413148449980905
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +119,7 @@ GameObject:
   - component: {fileID: 8110413148449980908}
   - component: {fileID: 8110413148449980907}
   m_Layer: 5
-  m_Name: balance
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,7 +142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 540.13, y: 0}
+  m_AnchoredPosition: {x: 125.130005, y: 0}
   m_SizeDelta: {x: 71.88, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8110413148449980909
@@ -321,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 586.44, y: 0}
+  m_AnchoredPosition: {x: 171.44, y: 0}
   m_SizeDelta: {x: 10.37, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8110413148693039282
@@ -448,7 +419,7 @@ GameObject:
   - component: {fileID: 8110413149763807376}
   - component: {fileID: 8110413149763807407}
   m_Layer: 5
-  m_Name: value
+  m_Name: Balance TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 576.07, y: 0}
+  m_AnchoredPosition: {x: 161.07, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8110413149763807377

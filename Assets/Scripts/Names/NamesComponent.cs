@@ -2,9 +2,9 @@ namespace BusinessECS
 {
     [System.Serializable]
     public struct NamesComponent {
-        public TMPro.TextMeshProUGUI businessName;
-        public TMPro.TextMeshProUGUI firstUpgradeName;
-        public TMPro.TextMeshProUGUI secondUpgradeName;
-        public NamesConfig namesData;
+        public TMPro.TextMeshProUGUI BusinessName;
+        public TMPro.TextMeshProUGUI FirstUpgradeName;
+        public TMPro.TextMeshProUGUI SecondUpgradeName;
+        public NamesConfig NamesData;
     }
 }

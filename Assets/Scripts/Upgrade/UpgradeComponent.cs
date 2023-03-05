@@ -2,13 +2,13 @@ namespace BusinessECS
 {
     [System.Serializable]
     public struct UpgradeComponent {
-        public UnityEngine.UI.Button upgradeButton1;
-        public UnityEngine.UI.Button upgradeButton2;
-        public TMPro.TextMeshProUGUI price1TMP;
-        public TMPro.TextMeshProUGUI multiplier1TMP;
-        public TMPro.TextMeshProUGUI price2TMP;
-        public TMPro.TextMeshProUGUI multiplier2TMP;
-        public UpgradeConfig upgradeData1;
-        public UpgradeConfig upgradeData2;
+        public UnityEngine.UI.Button UpgradeButton1;
+        public UnityEngine.UI.Button UpgradeButton2;
+        public TMPro.TextMeshProUGUI Price1TMP;
+        public TMPro.TextMeshProUGUI Multiplier1TMP;
+        public TMPro.TextMeshProUGUI Price2TMP;
+        public TMPro.TextMeshProUGUI Multiplier2TMP;
+        public UpgradeConfig Upgrade1Data;
+        public UpgradeConfig Upgrade2Data;
     }
 }
