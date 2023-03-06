@@ -56,7 +56,7 @@ namespace BusinessECS
             _mainBalance.Balance -= levelComponent.Price;
 
             levelComponent.Level++;
-
+        
             IncomeCalculator.UpdateIncome(ref incomeComponent, levelComponent);
             levelComponent.Price = (levelComponent.Level + 1) * levelComponent.LevelData.InitialLevelPrice;
         }

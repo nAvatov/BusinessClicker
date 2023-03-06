@@ -52,21 +52,9 @@ namespace BusinessECS
 
             foreach(var entityID in _businessFilter) { 
                 ref var cachedIncomeComponent = ref _businessFilter.Get2(entityID);
-
+                // Get saved income value from PlayerPrefs. Initial data from config varian returned by default.
                 cachedIncomeComponent.Income =  PlayerPrefs.GetFloat(entityID.ToString() + "income", cachedIncomeComponent.IncomeData == null ? 0 : cachedIncomeComponent.IncomeData.InitialIncome);
                 cachedIncomeComponent.IncomeProgress.value = PlayerPrefs.GetFloat(entityID.ToString() + "incomeProgress", 0f);
-            }
-        }
-
-        private void RefreshAllIncome() {
-            foreach(var incomeEntity in  _businessFilter) {
-                _businessFilter.Get2(incomeEntity).IncomeProgress.value = 0f;
-            } 
-        }
-
-        private void SetInitialIncome(ref IncomeComponent incomeComponent) {
-            if (incomeComponent.IncomeData != null) {
-                incomeComponent.Income = incomeComponent.IncomeData.InitialIncome;
             }
         }
 

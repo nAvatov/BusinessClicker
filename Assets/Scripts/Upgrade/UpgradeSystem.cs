@@ -110,7 +110,7 @@ namespace BusinessECS
                     break;
                 }
             }
-
+            // Push income view update after upgrade purchase
             IncomeCalculator.UpdateIncome(ref cachedIncomeComponent, _businessFilter.Get1(id));
             
         }
